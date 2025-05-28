@@ -1,7 +1,9 @@
 // This file is intentionally left blank.
+var maxSize = 140;
+var minSize = 40;
 for (var num = Math.floor(Math.random() * 100); num > 0; num--) {
     var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    var randomSize = Math.floor(Math.random() * 100);
+    var randomSize = Math.floor(Math.random() * (maxSize - minSize)) + minSize;
     var elm = document.createElement("button");
     elm.innerHTML = num;
     elm.setAttribute("id", num);
