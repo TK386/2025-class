@@ -8,36 +8,19 @@
     <!-- ここに Mapbox の JavascriptAPI と css を読み込むコードを書きます -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet" />
-    <style>
-        /* ここにCSSを書きます */
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <!-- ここにhtmlとjavascript書いていきます -->
+    <div id="search-widget">
+        <input type="text" id="search-term" placeholder="Enter a location">
+        <button id="search-button">Search Hotels</button>
+    </div>
     <div id="map"></div>
-    <script>
-        //mapboxのtokenを設定
-        mapboxgl.accessToken = 'pk.eyJ1IjoieXV1aWNuYWsiLCJhIjoiY21iaGdic3FuMGE2ZzJyc2J6aTc4cnBrOSJ9.AnuWoZlbGxnIETSnk8f2Vg';
-        //地図を表示させる
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/navigation-day-v1',
-            center: [131.277404, 33.956368],
-            zoom: 20
-        });
-    </script>
+    <script src="js/scripts.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAImS70WNR7Q1SsIBMuz_Pmr4LcEo2sFc0&libraries=places&callback=initMap"></script>
 </body>
 
 </html>
